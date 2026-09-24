@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8C8DC"/>
+      <stop offset="45%" stop-color="#C9A0F0"/>
+      <stop offset="100%" stop-color="#8FC7F5"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="face" cx="0.5" cy="0.42" r="0.5">
+      <stop offset="0%" stop-color="#FFF4E4"/>
+      <stop offset="100%" stop-color="#FFD9BE"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5A4636"/>
+      <stop offset="100%" stop-color="#3B2C20"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="blur2" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- 柔光渐变底 -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <!-- 光斑 -->
+  <circle cx="200" cy="240" r="90" fill="#FFFFFF" opacity="0.5" filter="url(#blur)"/>
+  <circle cx="820" cy="180" r="70" fill="#FFFFFF" opacity="0.4" filter="url(#blur)"/>
+  <circle cx="900" cy="820" r="100" fill="#FFF2A8" opacity="0.45" filter="url(#blur)"/>
+
+  <!-- 星芒高光 -->
+  <g fill="#FFFFFF">
+    <g transform="translate(170 360)" opacity="0.9">
+      <path d="M0 -22 L5 -5 L22 0 L5 5 L0 22 L-5 5 L-22 0 L-5 -5 Z"/>
+    </g>
+    <g transform="translate(860 420)" opacity="0.7">
+      <path d="M0 -16 L4 -4 L16 0 L4 4 L0 16 L-4 4 L-16 0 L-4 -4 Z"/>
+    </g>
+    <g transform="translate(740 260)" opacity="0.8">
+      <path d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z"/>
+    </g>
+  </g>
+
+  <!-- 人物半身剪影 -->
+  <g transform="translate(512 480)">
+    <!-- 头发 -->
+    <path d="M-150 -150 Q-170 -330 -60 -380 Q40 -430 130 -350 Q220 -280 170 -120 Q160 -30 130 60 L-120 70 Q-150 -40 -150 -150 Z" fill="url(#hair)"/>
+    <path d="M-60 -380 Q-20 -420 40 -410 Q110 -390 130 -350 Q40 -380 -60 -380 Z" fill="#6B5440"/>
+    <!-- 脸部 -->
+    <ellipse cx="0" cy="-160" rx="118" ry="150" fill="url(#face)"/>
+    <!-- 耳朵 -->
+    <circle cx="-118" cy="-150" r="22" fill="#F5CDB0"/>
+    <circle cx="118" cy="-150" r="22" fill="#F5CDB0"/>
+    <!-- 刘海 -->
+    <path d="M-118 -230 Q-90 -330 -20 -330 Q60 -330 120 -240 Q130 -290 90 -340 Q10 -400 -60 -360 Q-120 -320 -118 -230 Z" fill="url(#hair)"/>
+    <!-- 眉 -->
+    <path d="M-70 -200 Q-45 -214 -18 -202" stroke="#4A3A2E" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M24 -202 Q52 -214 78 -198" stroke="#4A3A2E" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- 眼 -->
+    <ellipse cx="-45" cy="-168" rx="26" ry="17" fill="#3B2C20"/>
+    <ellipse cx="50" cy="-168" rx="26" ry="17" fill="#3B2C20"/>
+    <circle cx="-42" cy="-172" r="6" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="53" cy="-172" r="6" fill="#FFFFFF" opacity="0.9"/>
+    <ellipse cx="-45" cy="-160" rx="14" ry="6" fill="#7A5C44" opacity="0.55"/>
+    <ellipse cx="50" cy="-160" rx="14" ry="6" fill="#7A5C44" opacity="0.55"/>
+    <!-- 腮红 -->
+    <ellipse cx="-82" cy="-120" rx="20" ry="10" fill="#F79BB8" opacity="0.5" filter="url(#blur2)"/>
+    <ellipse cx="88" cy="-120" rx="20" ry="10" fill="#F79BB8" opacity="0.5" filter="url(#blur2)"/>
+    <!-- 鼻唇 -->
+    <path d="M-4 -140 L-2 -128" stroke="#D9A584" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M-26 -108 Q0 -92 30 -108 Q6 -102 2 -104 Q-2 -102 -26 -108 Z" fill="#E2668B"/>
+    <!-- 衣领 -->
+    <path d="M-150 130 Q-90 30 0 40 Q90 30 150 130 L180 480 L-180 480 Z" fill="#FFFFFF"/>
+    <path d="M-30 44 L0 160 L30 44 Q15 30 0 30 Q-15 30 -30 44 Z" fill="#E2668B"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="512" y="900" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="72" font-weight="bold" fill="#5A2E4E" letter-spacing="12">韩漫条漫</text>
+  <text x="512" y="958" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="30" fill="#8A5A6E" letter-spacing="6">Webtoon Style</text>
+</svg>

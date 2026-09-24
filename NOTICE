@@ -1,0 +1,31 @@
+Hopeflow
+Copyright 2025 tonghuihuang <claire_channel@qq.com>
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------------
+Third-party components
+--------------------------------------------------------------------------------
+
+This software depends on and/or redistributes third-party open source
+components, each governed by its own license. Notable components include:
+
+  * Electron                                  MIT License
+  * Vue 3 / Vite / Pinia / TypeScript         MIT License
+  * TDesign Vue Next                          MIT License
+  * Express / Socket.IO / Knex / lodash       MIT License
+  * better-sqlite3 / sqlite3                  MIT License
+  * sharp                                     Apache License 2.0
+  * onnxruntime-node                          MIT License
+  * @huggingface/transformers                 Apache License 2.0
+  * Vercel AI SDK (@ai-sdk/*)                 Apache License 2.0
+  * vm2, zod, axios, sucrase, tsx             MIT License
+
+The sentence-embedding model bundled under
+  Hopeflow-app/data/models/all-MiniLM-L6-v2
+is derived from sentence-transformers/all-MiniLM-L6-v2 and is distributed
+under the Apache License, Version 2.0.
+
+This NOTICE file is provided for informational purposes only and does not
+modify the terms of any third-party license. See the LICENSE file for the
+terms that apply to Hopeflow itself.

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- 背景渐变：深紫到粉紫 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+    <!-- 左上角微妙高光 -->
+    <radialGradient id="glow" cx="35%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 圆角方形背景 -->
+  <rect width="1024" height="1024" rx="228" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="228" fill="url(#glow)"/>
+
+  <!-- 流动 H：两条圆角竖线（Hope 的支柱）+ 一条 S 形波浪横线（Flow），负空间构成抽象 H -->
+  <rect x="292" y="296" width="88" height="464" rx="44" fill="#FFFFFF"/>
+  <rect x="644" y="296" width="88" height="464" rx="44" fill="#FFFFFF"/>
+  <!-- S 形波浪从 H 内部穿过，体现流动感 -->
+  <path d="M 340 520 C 445 436, 579 604, 684 520" stroke="#FFFFFF" stroke-width="52" fill="none" stroke-linecap="round"/>
+</svg>

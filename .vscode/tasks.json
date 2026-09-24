@@ -1,0 +1,76 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev: backend",
+      "type": "shell",
+      "command": "pnpm dev",
+      "options": { "cwd": "${workspaceFolder}/Hopeflow-app" },
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true,
+        "group": "dev"
+      },
+      "problemMatcher": {
+        "owner": "dev-backend",
+        "pattern": { "regexp": "\\b\\B" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "服务启动成功",
+          "endsPattern": "服务启动成功"
+        }
+      }
+    },
+    {
+      "label": "dev: frontend",
+      "type": "shell",
+      "command": "pnpm dev",
+      "options": { "cwd": "${workspaceFolder}/Hopeflow-web" },
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true,
+        "group": "dev"
+      },
+      "problemMatcher": {
+        "owner": "dev-frontend",
+        "pattern": { "regexp": "\\b\\B" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "ready in|Local:|VITE",
+          "endsPattern": "ready in|Local:|VITE"
+        }
+      }
+    },
+    {
+      "label": "dev",
+      "dependsOn": ["dev: backend", "dev: frontend"],
+      "dependsOrder": "parallel",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "install",
+      "dependsOn": ["install: backend", "install: frontend"],
+      "dependsOrder": "parallel",
+      "problemMatcher": []
+    },
+    {
+      "label": "install: backend",
+      "type": "shell",
+      "command": "pnpm install",
+      "options": { "cwd": "${workspaceFolder}/Hopeflow-app" },
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "install" }
+    },
+    {
+      "label": "install: frontend",
+      "type": "shell",
+      "command": "p n p m install",
+      "options": { "cwd": "${workspaceFolder}/Hopeflow-web" },
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "install" }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.45" r="0.7">
+      <stop offset="0%" stop-color="#2B1E5E"/>
+      <stop offset="60%" stop-color="#1A1244"/>
+      <stop offset="100%" stop-color="#0D0A26"/>
+    </radialGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD76E"/>
+      <stop offset="100%" stop-color="#F5A623"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8C7BFF"/>
+      <stop offset="100%" stop-color="#4A3BCC"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+
+  <!-- 深邃夜空 -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- 星点 -->
+  <g fill="#FFFFFF">
+    <circle cx="120" cy="180" r="3" opacity="0.8"/>
+    <circle cx="300" cy="110" r="2" opacity="0.6"/>
+    <circle cx="760" cy="150" r="3" opacity="0.8"/>
+    <circle cx="900" cy="260" r="2" opacity="0.5"/>
+    <circle cx="180" cy="420" r="2" opacity="0.5"/>
+    <circle cx="850" cy="480" r="2" opacity="0.6"/>
+    <circle cx="640" cy="90" r="2" opacity="0.6"/>
+  </g>
+
+  <!-- 光环 -->
+  <circle cx="512" cy="380" r="340" fill="none" stroke="#8C7BFF" stroke-width="2" opacity="0.35"/>
+  <circle cx="512" cy="380" r="300" fill="none" stroke="#8C7BFF" stroke-width="1.5" opacity="0.25" stroke-dasharray="10 14"/>
+
+  <!-- 沙漏 -->
+  <g transform="translate(512 380)">
+    <!-- 框架 -->
+    <rect x="-110" y="-260" width="220" height="560" rx="34" fill="url(#frame)" opacity="0.25"/>
+    <rect x="-92" y="-242" width="184" height="524" rx="22" fill="none" stroke="#A89BFF" stroke-width="5"/>
+    <!-- 上斗 -->
+    <path d="M-110 -242 L-84 -190 Q0 -20 84 -190 L110 -242 Z" fill="url(#frame)" opacity="0.55"/>
+    <ellipse cx="0" cy="-242" rx="110" ry="16" fill="#B4A8FF"/>
+    <!-- 下斗 -->
+    <path d="M-110 242 L-84 190 Q0 20 84 190 L110 242 Z" fill="url(#frame)" opacity="0.55"/>
+    <ellipse cx="0" cy="242" rx="110" ry="16" fill="#B4A8FF"/>
+    <!-- 上沙 -->
+    <path d="M-20 0 L0 -110 L20 0 Z" fill="url(#sand)"/>
+    <!-- 下沙堆 -->
+    <path d="M-34 150 Q0 100 34 150 L34 210 L-34 210 Z" fill="url(#sand)"/>
+    <!-- 流沙线 -->
+    <line x1="0" y1="-8" x2="0" y2="96" stroke="#FFD76E" stroke-width="5" stroke-linecap="round" filter="url(#glow)" opacity="0.9"/>
+    <!-- 玻璃 -->
+    <path d="M-84 -190 Q0 -20 84 -190 L84 190 Q0 20 -84 190 Z" fill="none" stroke="#D8D2FF" stroke-width="3" opacity="0.7"/>
+  </g>
+
+  <!-- 光粒子（回流） -->
+  <g fill="#FFD76E" filter="url(#glow)">
+    <circle cx="512" cy="60" r="7"/>
+    <circle cx="420" cy="150" r="5"/>
+    <circle cx="610" cy="130" r="6"/>
+    <circle cx="360" cy="300" r="4"/>
+    <circle cx="680" cy="280" r="5"/>
+    <circle cx="470" cy="650" r="5"/>
+    <circle cx="580" cy="700" r="4"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="512" y="860" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="72" font-weight="bold" fill="#FFD76E" letter-spacing="12">重生逆袭</text>
+  <text x="512" y="918" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="28" fill="#A89BFF" letter-spacing="6">Rebirth · Comeback</text>
+</svg>

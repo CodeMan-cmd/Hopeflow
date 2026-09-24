@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.35" r="0.8">
+      <stop offset="0%" stop-color="#3A4A5E"/>
+      <stop offset="60%" stop-color="#1E2835"/>
+      <stop offset="100%" stop-color="#0A0E14"/>
+    </radialGradient>
+    <radialGradient id="moon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#F2F6FF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#C6D4F0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#121826"/>
+      <stop offset="100%" stop-color="#0A0F1A"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2A3345"/>
+      <stop offset="100%" stop-color="#161C28"/>
+    </linearGradient>
+    <filter id="fog" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <!-- 夜雾苍穹 -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- 冷月 -->
+  <circle cx="240" cy="220" r="160" fill="url(#moon)"/>
+  <circle cx="240" cy="220" r="58" fill="#EDF2FF"/>
+  <circle cx="228" cy="206" r="12" fill="#D5DDF0" opacity="0.6"/>
+  <circle cx="258" cy="236" r="8" fill="#D5DDF0" opacity="0.5"/>
+  <circle cx="220" cy="238" r="6" fill="#D5DDF0" opacity="0.5"/>
+
+  <!-- 古宅剪影 -->
+  <g>
+    <!-- 主楼 -->
+    <path d="M360 1024 L360 560 L660 560 L660 1024 Z" fill="url(#wall)"/>
+    <!-- 屋顶 -->
+    <path d="M330 560 L510 430 L690 560 Z" fill="url(#roof)"/>
+    <!-- 塔楼 -->
+    <path d="M560 1024 L560 430 L640 430 L640 1024 Z" fill="url(#wall)"/>
+    <path d="M540 430 L600 330 L660 430 Z" fill="url(#roof)"/>
+    <!-- 烟囱 -->
+    <rect x="600" y="360" width="28" height="70" fill="#0A0F1A"/>
+    <!-- 窗（幽暗暖光） -->
+    <rect x="420" y="620" width="40" height="54" fill="#5E3416" opacity="0.85"/>
+    <rect x="420" y="700" width="40" height="54" fill="#4A2A12" opacity="0.6"/>
+    <rect x="570" y="500" width="30" height="44" fill="#5E3416" opacity="0.8"/>
+    <!-- 窗棂 -->
+    <g stroke="#0A0F1A" stroke-width="4">
+      <line x1="440" y1="620" x2="440" y2="674"/>
+      <line x1="420" y1="647" x2="460" y2="647"/>
+      <line x1="585" y1="500" x2="585" y2="544"/>
+      <line x1="570" y1="522" x2="600" y2="522"/>
+    </g>
+    <!-- 大门 -->
+    <path d="M480 1024 L480 900 Q510 880 540 900 L540 1024 Z" fill="#0A0F1A"/>
+  </g>
+
+  <!-- 枯树 -->
+  <g stroke="#121A26" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M840 1024 L820 700 Q800 600 760 540"/>
+    <path d="M820 700 Q880 660 920 600"/>
+    <path d="M770 570 Q730 520 700 560"/>
+    <path d="M760 540 Q780 500 770 460"/>
+  </g>
+
+  <!-- 迷雾 -->
+  <ellipse cx="300" cy="800" rx="420" ry="70" fill="#5A6A80" opacity="0.25" filter="url(#fog)"/>
+  <ellipse cx="700" cy="860" rx="380" ry="60" fill="#4A5A70" opacity="0.22" filter="url(#fog)"/>
+  <ellipse cx="512" cy="720" rx="300" ry="46" fill="#6A7A90" opacity="0.18" filter="url(#fog)"/>
+
+  <!-- 雾气纹理 -->
+  <rect width="1024" height="1024" filter="url(#grain)"/>
+
+  <!-- 标题 -->
+  <text x="512" y="170" text-anchor="middle" font-family="'STSong','SimSun',serif" font-size="72" font-weight="bold" fill="#C6D4F0" letter-spacing="12">悬疑灵异</text>
+  <text x="512" y="226" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="26" fill="#8A9AB5" letter-spacing="6">Supernatural Suspense</text>
+</svg>

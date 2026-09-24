@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8F4EA"/>
+      <stop offset="100%" stop-color="#E8E0CE"/>
+    </linearGradient>
+    <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A4238"/>
+      <stop offset="100%" stop-color="#2B2620"/>
+    </linearGradient>
+    <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B6152"/>
+      <stop offset="100%" stop-color="#3E3830"/>
+    </linearGradient>
+    <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8C8372"/>
+      <stop offset="100%" stop-color="#57503F"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <!-- 宣纸底 -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- 远山（淡墨） -->
+  <path d="M0 640 Q160 470 330 590 Q430 380 560 560 Q690 420 800 560 Q900 470 1024 590 L1024 1024 L0 1024 Z" fill="#9C9480" opacity="0.5" filter="url(#soft2)"/>
+  <path d="M0 700 Q200 540 380 660 Q520 470 680 640 Q820 540 1024 660 L1024 1024 L0 1024 Z" fill="url(#m3)" opacity="0.7" filter="url(#soft2)"/>
+
+  <!-- 中景山 -->
+  <path d="M0 780 Q180 640 340 760 Q470 600 620 740 Q780 620 1024 760 L1024 1024 L0 1024 Z" fill="url(#m2)" filter="url(#soft)"/>
+
+  <!-- 近山（浓墨） -->
+  <path d="M0 900 Q240 760 480 900 Q720 780 1024 900 L1024 1024 L0 1024 Z" fill="url(#m1)"/>
+
+  <!-- 云雾 -->
+  <ellipse cx="240" cy="700" rx="300" ry="46" fill="#F6F1E4" opacity="0.85" filter="url(#soft2)"/>
+  <ellipse cx="760" cy="740" rx="260" ry="40" fill="#F6F1E4" opacity="0.7" filter="url(#soft2)"/>
+
+  <!-- 孤舟 -->
+  <g transform="translate(560 830)">
+    <path d="M-70 0 Q0 40 70 0 Q40 14 0 16 Q-40 14 -70 0 Z" fill="#2B2620"/>
+    <line x1="0" y1="-10" x2="0" y2="-80" stroke="#2B2620" stroke-width="3"/>
+    <path d="M0 -78 Q26 -62 36 -44 Q10 -48 0 -78 Z" fill="#2B2620"/>
+    <ellipse cx="-10" cy="-16" rx="8" ry="14" fill="#F8F4EA" opacity="0.9"/>
+  </g>
+
+  <!-- 飞鸟 -->
+  <g stroke="#4A4238" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75">
+    <path d="M300 330 Q310 320 322 332 Q334 320 344 330"/>
+    <path d="M410 290 Q418 282 428 292 Q438 282 446 290"/>
+    <path d="M520 350 Q527 343 536 352 Q545 343 552 350"/>
+  </g>
+
+  <!-- 题字竖排 -->
+  <g font-family="'STKaiti','KaiTi','Noto Serif SC',serif" fill="#3E3830">
+    <text x="120" y="300" font-size="72" letter-spacing="16">水</text>
+    <text x="120" y="396" font-size="72" letter-spacing="16">墨</text>
+    <text x="120" y="492" font-size="72" letter-spacing="16">丹</text>
+    <text x="120" y="588" font-size="72" letter-spacing="16">青</text>
+  </g>
+
+  <!-- 朱红印章 -->
+  <g transform="translate(150 700)">
+    <rect x="0" y="0" width="92" height="92" rx="8" fill="#B03A2E"/>
+    <text x="46" y="38" text-anchor="middle" font-family="'STKaiti','KaiTi',serif" font-size="34" fill="#F8F4EA">墨</text>
+    <text x="46" y="78" text-anchor="middle" font-family="'STKaiti','KaiTi',serif" font-size="34" fill="#F8F4EA">韵</text>
+  </g>
+</svg>

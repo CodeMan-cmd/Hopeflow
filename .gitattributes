@@ -1,0 +1,34 @@
+# 统一换行符：仓库内一律 LF，避免跨平台提交时整文件 diff
+* text=auto eol=lf
+
+# 明确二进制文件，禁止换行符转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.icns binary
+*.mp4 binary
+*.mov binary
+*.mp3 binary
+*.wav binary
+*.onnx binary
+*.exe binary
+*.dll binary
+*.node binary
+*.so binary
+*.dylib binary
+*.zip binary
+*.gz binary
+*.7z binary
+
+# 锁文件在 diff / 语言统计里折叠
+Hopeflow-app/pnpm-lock.yaml linguist-generated=true
+Hopeflow-web/pnpm-lock.yaml linguist-generated=true
+Hopeflow-app/data/serve/app.js linguist-generated=true
+
+# 文档与协议文件
+LICENSE text eol=lf
+NOTICE text eol=lf
+*.md text eol=lf

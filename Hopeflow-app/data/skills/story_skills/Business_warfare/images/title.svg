@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14100E"/>
+      <stop offset="70%" stop-color="#241C18"/>
+      <stop offset="100%" stop-color="#3A2A20"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E2A3A" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#0F1620" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE2A8"/>
+      <stop offset="100%" stop-color="#C9964A"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- 夜色天际 -->
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- 摩天楼群 -->
+  <g fill="url(#glass)">
+    <rect x="60" y="300" width="120" height="724"/>
+    <rect x="220" y="200" width="150" height="824"/>
+    <rect x="420" y="340" width="110" height="684"/>
+    <rect x="580" y="180" width="150" height="844"/>
+    <rect x="790" y="320" width="130" height="704"/>
+    <!-- 楼冠 -->
+    <rect x="240" y="150" width="110" height="50"/>
+    <rect x="610" y="130" width="110" height="50"/>
+  </g>
+
+  <!-- 金色窗点 -->
+  <g fill="#FFC96B" opacity="0.85">
+    <rect x="90" y="340" width="14" height="20"/>
+    <rect x="130" y="380" width="14" height="20"/>
+    <rect x="90" y="460" width="14" height="20"/>
+    <rect x="170" y="520" width="14" height="20"/>
+    <rect x="260" y="260" width="14" height="20"/>
+    <rect x="310" y="260" width="14" height="20"/>
+    <rect x="260" y="380" width="14" height="20"/>
+    <rect x="350" y="440" width="14" height="20"/>
+    <rect x="450" y="390" width="14" height="20"/>
+    <rect x="620" y="240" width="14" height="20"/>
+    <rect x="680" y="240" width="14" height="20"/>
+    <rect x="620" y="360" width="14" height="20"/>
+    <rect x="730" y="300" width="14" height="20"/>
+    <rect x="820" y="380" width="14" height="20"/>
+    <rect x="880" y="440" width="14" height="20"/>
+  </g>
+
+  <!-- 棋局 -->
+  <g transform="translate(512 760)">
+    <!-- 棋盘透视 -->
+    <path d="M-260 0 L-150 -170 L150 -170 L260 0 Z" fill="#4A3828"/>
+    <path d="M-150 -170 L-100 -220 L100 -220 L150 -170 Z" fill="#5A4632"/>
+    <!-- 格线 -->
+    <g stroke="#2E2418" stroke-width="2" opacity="0.8">
+      <line x1="-206" y1="-34" x2="-120" y2="-170"/>
+      <line x1="-103" y1="-68" x2="-60" y2="-170"/>
+      <line x1="0" y1="-85" x2="0" y2="-170"/>
+      <line x1="103" y1="-68" x2="60" y2="-170"/>
+      <line x1="206" y1="-34" x2="120" y2="-170"/>
+      <line x1="-120" y1="-170" x2="-60" y2="-170"/>
+      <line x1="-60" y1="-170" x2="60" y2="-170"/>
+      <line x1="60" y1="-170" x2="120" y2="-170"/>
+    </g>
+    <!-- 棋子 -->
+    <g fill="url(#gold)" filter="url(#glow)">
+      <circle cx="-150" cy="-60" r="16"/>
+      <circle cx="0" cy="-100" r="16"/>
+      <circle cx="110" cy="-40" r="16"/>
+    </g>
+    <circle cx="90" cy="-140" r="12" fill="#E8E0D0"/>
+    <circle cx="-70" cy="-140" r="12" fill="#E8E0D0"/>
+  </g>
+
+  <!-- 标题 -->
+  <text x="512" y="140" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="72" font-weight="bold" fill="#FFD98A" letter-spacing="14">豪门商战</text>
+  <text x="512" y="196" text-anchor="middle" font-family="'Microsoft YaHei',sans-serif" font-size="28" fill="#C9B48E" letter-spacing="6">Business Warfare</text>
+</svg>

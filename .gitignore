@@ -1,0 +1,100 @@
+# =====================
+# 依赖
+# =====================
+**/node_modules/
+
+# =====================
+# 构建产物
+# =====================
+**/build/
+**/dist/
+**/.output/
+**/.vite/
+**/.gyp-home/
+**/.cache/electron-builder/
+**/.pnpm-cache/
+**/run-test-data4/
+
+# =====================
+# 环境变量（绝不提交）
+# =====================
+**/.env
+**/.env.*
+!**/.env.example
+env/.env*
+**/env/.env*
+
+# =====================
+# 密钥 / 证书 / 凭据（绝不提交）
+# =====================
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+**/id_rsa
+**/id_ed25519
+**/*credentials*.json
+**/*service-account*.json
+**/secrets/**
+
+# =====================
+# 大体积演示素材（70MB 级成片，放 Release 或本地自备，不进仓库）
+# =====================
+Hopeflow-app/data/assets/ending.mp4
+Hopeflow-app/data/assets/hopeflow-3min-*.mp4
+
+# =====================
+# 日志与临时文件
+# =====================
+**/*.log
+**/logs/
+**/tmp/
+**/*.bak
+
+# =====================
+# 系统文件
+# =====================
+**/.DS_Store
+**/Thumbs.db
+Hopeflow-app/pnpm-workspace.yaml
+Hopeflow-app/pnpm-lock.yaml
+
+# =====================
+# 内部研发资产（AI 工作区文档 / 技能 / 规则，仅保留在本地）
+# =====================
+/.trae/
+.trae/
+
+# =====================
+# 本机启动 / 部署 / 构建脚本
+# 这些脚本包含本机路径、内网隧道地址与默认口令，
+# 仅保留在本地，不进入公开仓库。
+# =====================
+/dev.sh
+/dev.ps1
+/dev.bat
+/dev.cmd
+/build-web.sh
+/build-web.ps1
+/build-web.bat
+/start-tunnel.bat
+/start-tunnel.command
+/start-tunnel.sh
+/start.sh
+/start.ps1
+/start.bat
+*.command
+/scripts/local/
+/deploy/
+
+# =====================
+# frp 内网穿透（服务器地址与 auth token 属机密，整目录排除）
+# =====================
+/frp/
+frpc
+frpc.exe
+frpc.toml
+*.frpc.toml
+frpc-*.toml
